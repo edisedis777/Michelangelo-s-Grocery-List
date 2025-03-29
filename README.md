@@ -52,7 +52,7 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 - Open a pull request.
 - Please ensure your code follows the existing style and includes appropriate comments.
 
-##Credits
+## Credits
 - The grocery list artifact is sourced from Casa Buonarroti: https://www.casabuonarroti.it/ricerca/archivio/
 - Inspiration for the project came from a desire to make historical documents interactive and accessible to a modern audience.
 
