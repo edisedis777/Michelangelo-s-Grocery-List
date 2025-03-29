@@ -16,7 +16,7 @@ The document is based on an artifact from [Casa Buonarroti](https://www.casabuon
 - **Subtle Animations**: Hotspots and tooltips feature animations for a more engaging user experience.
 
 ## Demo
-You can view a live demo of the project [here](#)
+You can view a live demo of the project [here](https://edisedis777.github.io/Michelangelo-s-Grocery-List/)
 
 ## Usage
 Explore the List: Hover over (desktop) or tap (mobile) the hotspots on the grocery list image to see tooltips with item descriptions.
