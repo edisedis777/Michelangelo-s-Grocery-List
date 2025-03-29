@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="description"
+      content="Explore Michelangelo's illustrated grocery list from the Renaissance period" />
+    <title>Michelangelo's Grocery List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add favicon for better mobile bookmark experience -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍞</text></svg>" />
+    <!-- Add theme color for mobile browsers -->
+    <meta name="theme-color" content="#694a38" />
+    <!-- Apple touch icon -->
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍞</text></svg>" />
+    <!-- Preconnect for faster image loading -->
+    <link rel="preconnect" href="https://www.casabuonarroti.it" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Citation: Based on artifact from Casa Buonarroti -->
+        <h1>Michelangelo's Grocery List</h1>
+        <p class="intro">
+          Explore this fascinating grocery list from the Renaissance master
+          Michelangelo Buonarroti. Tap on items to discover what the great
+          artist requested for his meals.
+        </p>
+        <button class="toggle-mode" aria-label="Toggle translation view">
+          Switch to Translation View
+        </button>
+      </header>
+
+      <div class="document-container">
+        <div
+          class="document"
+          aria-label="Historical document showing Michelangelo's grocery list with illustrations">
+          <img
+            src="images/michelangelo-list.jpg"
+            alt="Michelangelo's grocery list with hand-drawn illustrations of food items"
+            id="list-image"
+            loading="eager" />
+          <!-- Hotspots will be added via JavaScript -->
+        </div>
+
+        <div class="items-container">
+          <h2>List of Items</h2>
+          <div
+            class="item"
+            data-id="bread"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Bread (Pani)</h3>
+            <p>Various types of bread requested by the artist</p>
+          </div>
+          <div
+            class="item"
+            data-id="wine"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Wine (Vino)</h3>
+            <p>Wine was a staple in Renaissance diets</p>
+          </div>
+          <div
+            class="item"
+            data-id="fish"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Fish</h3>
+            <p>Depicted in simple line drawings</p>
+          </div>
+          <div
+            class="item"
+            data-id="vegetables"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Vegetables</h3>
+            <p>Essential components of Italian cuisine</p>
+          </div>
+          <div
+            class="item"
+            data-id="salad"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Salad</h3>
+            <p>Fresh greens and vegetables</p>
+          </div>
+          <div
+            class="item"
+            data-id="plates"
+            tabindex="0"
+            role="button"
+            aria-pressed="false">
+            <h3>Plates/Dishes</h3>
+            <p>Various serving vessels for the meals</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-panel">
+        <h2>About This Document</h2>
+        <p>
+          This remarkable document is a grocery list written by Michelangelo,
+          the famous Renaissance artist known for masterpieces like the Sistine
+          Chapel ceiling and the statue of David. Unlike his grand artistic
+          works, this humble shopping list offers us a glimpse into his everyday
+          life.
+        </p>
+        <p>
+          Michelangelo Buonarroti (1475-1564) was a polymath of the High
+          Renaissance, excelling in sculpture, painting, architecture, and
+          poetry. His grocery list, while a mundane document, reflects the
+          everyday life of even the most celebrated artists of the time. The
+          inclusion of illustrations alongside the text highlights the practical
+          challenges of communication in an era when literacy was not
+          widespread.
+        </p>
+        <p>
+          The list includes simple drawings alongside text because
+          Michelangelo's servant was most likely illiterate. By including small
+          sketches of the items he needed, he ensured that his servant would
+          purchase the correct items at the market.
+        </p>
+        <p>
+          The list showcases typical Italian Renaissance food items, including
+          breads, wines, and fish, reflecting his diet. This document
+          demonstrates how even the greatest artistic minds dealt with practical
+          everyday matters. 
+          <p> Image source:
+            https://www.casabuonarroti.it/ricerca/archivio/</p>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

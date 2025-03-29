@@ -1,0 +1,272 @@
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #f5f1e6;
+  margin: 0;
+  padding: 0;
+  color: #46433a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #694a38;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+p.intro {
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.document-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.document {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 2/3;
+  background-color: #e5d9c3;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.document img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.items-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.item {
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background-color: #f9f5eb;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item:hover {
+  background-color: #f0e9d9;
+  transform: translateX(5px);
+}
+
+.item.active {
+  border-left: 4px solid #8b5a2b;
+  background-color: #f0e9d9;
+}
+
+.item h3 {
+  margin: 0 0 5px 0;
+  color: #694a38;
+  font-size: 1.1rem;
+}
+
+.item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hotspot {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(105, 74, 56, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 10;
+}
+
+.hotspot:hover,
+.hotspot:active {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #694a38;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 200px;
+  font-size: 0.9rem;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  pointer-events: none;
+}
+
+.info-panel {
+  background-color: #f9f5eb;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.info-panel h2 {
+  color: #694a38;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.info-panel p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.toggle-mode {
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: #694a38;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.toggle-mode:hover,
+.toggle-mode:active {
+  background-color: #8b5a2b;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .document-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .toggle-mode {
+    width: auto;
+  }
+
+  p.intro {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Ensure touch targets are large enough */
+@media (max-width: 767px) {
+  .item {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .hotspot {
+    /* Make hotspots slightly larger on mobile for easier touch */
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  .hotspot.active {
+    transform: scale(1.1);
+  }
+
+  .hotspot:focus {
+    outline: 2px solid #694a38;
+    outline-offset: 2px;
+  }
+
+  .tooltip {
+    max-width: 80vw;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Add some space at the bottom for scrolling */
+  .container {
+    padding-bottom: 40px;
+  }
+}
+
+/* Fix for small mobile devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .document,
+  .items-container {
+    /* Ensure full width with margins */
+    width: calc(100% - 10px);
+  }
+
+  .info-panel {
+    padding: 12px;
+  }
+}
+
+/* Fix for iOS Safari's disappearing fixed elements */
+@supports (-webkit-overflow-scrolling: touch) {
+  .tooltip {
+    transform: translateZ(0);
+  }
+}
+
+/* Improve accessibility */
+.item:focus,
+.hotspot:focus,
+.toggle-mode:focus {
+  outline: 2px solid #8b5a2b;
+  outline-offset: 2px;
+}
